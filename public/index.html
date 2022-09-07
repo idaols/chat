@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="chat.js"></script>
+    <link href="css/output.css" rel="stylesheet" />
+    <title>Chat</title>
+  </head>
+  <body>
+    <!-- <div class="top-0 bg-nav-bg h-10"></div> -->
+    <div class="top-0 bg-nav-bg p-2">
+      <form class="pt-10">
+        <div class="flex items-center py-2 px-3 bg-mm-fiery-rose rounded-xl">
+          <button
+            type="button"
+            class="inline-flex justify-center p-2 text-mm-key-lime rounded-full cursor-pointer hover:text-mm-fiery-rose hover:bg-mm-key-lime"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="p-2 text-mm-key-lime rounded-full cursor-pointer hover:text-mm-fiery-rose hover:bg-mm-key-lime"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <textarea
+            id="message"
+            rows="1"
+            class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:outline-mm-fiery-rose"
+            placeholder="Lähetä viesti..."
+          ></textarea>
+          <button
+            type="submit"
+            class="inline-flex justify-center p-2 text-mm-key-lime rounded-full cursor-pointer hover:text-mm-fiery-rose hover:bg-mm-key-lime"
+          >
+            <svg
+              class="w-6 h-6 rotate-90"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <ul id="messages"></ul>
+  </body>
+</html>
